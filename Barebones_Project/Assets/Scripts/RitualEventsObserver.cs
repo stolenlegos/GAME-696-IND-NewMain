@@ -10,6 +10,7 @@ public class RitualEventsObserver : MonoBehaviour
     private int numActiveElems;
     private int numActiveAshes;  
     private bool circleActive;
+    private List<bool> _ghostBooleans; 
     private bool _ghostIan; 
     private bool _ghostAunt;  
     private bool _ghostChuck; 
@@ -17,6 +18,10 @@ public class RitualEventsObserver : MonoBehaviour
     private List<GameObject> ghostOrbs; 
     public GameObject halfGhost; 
     public GameObject fullGhost; 
+    
+    private void Start() { 
+        //_ghostBooleans = <_ghostIan, _ghostChuck, _ghostAunt>; 
+    }
     private void Update() { 
         if (numActiveCandles == 4) {
             //activate the half ghost object
@@ -52,5 +57,14 @@ public class RitualEventsObserver : MonoBehaviour
         if (itemType == "ashes") {
             numActiveAshes += num; 
         }
+    }
+
+    private void toggleGhostObjectBool(bool ghost) {
+
+    }
+    private void SetCurrentGhostSet(int modulo) { 
+        int numVoices; 
+        //foreach () { 
+        //}
     }
 }

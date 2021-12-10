@@ -16,8 +16,8 @@ public class HoverOutline : MonoBehaviour
     }
 
     private void OnMouseEnter() {
+        Debug.Log("codeReached");
         meshRenderer.material = hoverMat;
-        Debug.Log("MATERIAL ACTIVATED");
     }
 
     private void OnMouseExit() {
