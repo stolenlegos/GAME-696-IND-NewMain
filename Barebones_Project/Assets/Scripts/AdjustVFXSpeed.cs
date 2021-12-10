@@ -4,11 +4,15 @@ using UnityEngine;
 using UnityEngine.VFX;
 
 public class AdjustVFXSpeed : MonoBehaviour {
-  [SerializeField] private float timeScale = 0.25f;
+  [SerializeField] private float timeScale;
   [SerializeField] private VisualEffect VFX;
 
   void Start() {
     VFX = GetComponent<VisualEffect>();
-    VFX.playRate = timeScale;
+    if (gameObject.tag == "Half Ghost") {
+      VFX.playRate = 1f;
+    } else {
+      VFX.playRate = timeScale;
+    }
   }
 }
