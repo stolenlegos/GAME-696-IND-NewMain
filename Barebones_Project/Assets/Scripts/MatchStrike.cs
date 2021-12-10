@@ -4,9 +4,24 @@ using UnityEngine;
 
 public class MatchStrike : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other) {
-        if (other.tag == "Match") { 
-            other.transform.GetChild(0).gameObject.SetActive(true);
+  private bool matchInHand;
+  private GameObject match;
+
+  void Start() {
+    MatchEvents.ChangeHold += ChangeBool;
+    matchInHand = false;
+  }
+
+    private void OnMouseEnter() {
+        if (matchInHand) {
+            match.transform.GetChild(0).gameObject.SetActive(true);
+            Debug.Log("Strike Match");
         }
+    }
+
+    private void ChangeBool(bool tf, GameObject obj) {
+      match = obj;
+      matchInHand = tf;
+      Debug.Log(matchInHand);
     }
 }

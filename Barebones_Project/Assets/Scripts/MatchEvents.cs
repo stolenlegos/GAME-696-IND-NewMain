@@ -3,17 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MatchEvents {
-  public delegate void MatchAction ();
-  public static event MatchAction PickedUp;
-  public static event MatchAction PutedDown;
+  public delegate void MatchAction (bool tf, GameObject match);
+  public static event MatchAction ChangeHold;
 
 
-  public static void PickUp() {
-
-  }
-
-
-  public static void PutDown() {
-
+  public static void PickUpDrop(bool tf, GameObject match) {
+    if (ChangeHold != null) {
+      ChangeHold(tf, match);
+    }
   }
 }

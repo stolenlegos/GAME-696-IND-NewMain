@@ -26,7 +26,7 @@ public class PickUp : MonoBehaviour
             //rb.isKinematic = true;
             if (gameObject.tag == "Match") {
                 transform.rotation = new Quaternion(-45, 45, 45, 0);
-                MatchEvents.PickUp();
+                MatchEvents.PickUpDrop(true, this.gameObject);
             }
         }
     }
@@ -37,6 +37,6 @@ public class PickUp : MonoBehaviour
         this.transform.parent = null;
         //rb.isKinematic = false;
         rb.useGravity = true;
-        MatchEvents.PutDown();
+        MatchEvents.PickUpDrop(false, this.gameObject);
     }
 }
