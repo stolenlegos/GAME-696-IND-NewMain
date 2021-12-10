@@ -2221,6 +2221,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 527366549}
+--- !u!114 &324841440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324841437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a108c52f66ccf8e45831b944024df93c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &324841442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2876,6 +2888,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &458417069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458417065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a108c52f66ccf8e45831b944024df93c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &458417071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6974,6 +6998,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 527366549}
+--- !u!114 &1132065863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132065860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a108c52f66ccf8e45831b944024df93c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1132065865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7655,7 +7691,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1229101445
 Transform:
   m_ObjectHideFlags: 0
@@ -7677,7 +7713,7 @@ VFXRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229101444}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -8102,6 +8138,7 @@ GameObject:
   - component: {fileID: 1307123167}
   - component: {fileID: 1307123166}
   - component: {fileID: 1307123169}
+  - component: {fileID: 1307123170}
   m_Layer: 0
   m_Name: GreenCandeEvent
   m_TagString: Untagged
@@ -8199,6 +8236,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectedCandle: {fileID: 923019467}
+--- !u!114 &1307123170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307123164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a108c52f66ccf8e45831b944024df93c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1308184316
 GameObject:
   m_ObjectHideFlags: 0
@@ -8212,6 +8261,7 @@ GameObject:
   - component: {fileID: 1308184319}
   - component: {fileID: 1308184318}
   - component: {fileID: 1308184321}
+  - component: {fileID: 1308184322}
   m_Layer: 0
   m_Name: BlueCandleEvent
   m_TagString: Untagged
@@ -8309,6 +8359,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectedCandle: {fileID: 1450501661}
+--- !u!114 &1308184322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308184316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a108c52f66ccf8e45831b944024df93c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1311800875 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8775663972487301715, guid: 99ff618bf2bcf9446a16f224b2f8218f, type: 3}
@@ -11047,6 +11109,7 @@ GameObject:
   - component: {fileID: 1756201233}
   - component: {fileID: 1756201232}
   - component: {fileID: 1756201235}
+  - component: {fileID: 1756201236}
   m_Layer: 0
   m_Name: RedCandleEvent
   m_TagString: Untagged
@@ -11144,6 +11207,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectedCandle: {fileID: 366120749}
+--- !u!114 &1756201236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756201230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a108c52f66ccf8e45831b944024df93c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1760363731
 GameObject:
   m_ObjectHideFlags: 0
@@ -11292,6 +11367,7 @@ GameObject:
   - component: {fileID: 1789222470}
   - component: {fileID: 1789222469}
   - component: {fileID: 1789222472}
+  - component: {fileID: 1789222473}
   m_Layer: 0
   m_Name: YellowCandleEvent
   m_TagString: Untagged
@@ -11389,6 +11465,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectedCandle: {fileID: 1596219677}
+--- !u!114 &1789222473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789222467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a108c52f66ccf8e45831b944024df93c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1789342689
 GameObject:
   m_ObjectHideFlags: 0
@@ -11553,6 +11641,18 @@ MonoBehaviour:
   objectToChange: {fileID: 1260006874}
   noHoverMat: {fileID: 2100000, guid: 36c34f32fc9bdda4a9f94e80f6c1bc6b, type: 2}
   hoverMat: {fileID: 2100000, guid: e37108327cd39a14e8fafb50f07d101d, type: 2}
+--- !u!114 &1802183330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802183323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47604b058fdda5144b1a6b8dff9ad090, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1813208516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12184,7 +12284,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3536658f1dbfe49409665ccd65e54433, type: 3}
       propertyPath: m_TagString
-      value: interactable
+      value: Sage
       objectReference: {fileID: 0}
     - target: {fileID: 2210265477296055188, guid: 3536658f1dbfe49409665ccd65e54433, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -13182,6 +13282,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 527366549}
+--- !u!114 &2064943855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064943852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a108c52f66ccf8e45831b944024df93c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2064943857
 MonoBehaviour:
   m_ObjectHideFlags: 0

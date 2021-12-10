@@ -15,7 +15,7 @@ public class PickUp : MonoBehaviour
     private void OnMouseDown()
     {
         if (gameObject.tag == "interactable" || gameObject.tag == "Fire" || gameObject.tag == "Air"
-        || gameObject.tag == "Earth" || gameObject.tag == "Water" || gameObject.tag == "Match")
+        || gameObject.tag == "Earth" || gameObject.tag == "Water" || gameObject.tag == "Match" || gameObject.tag == "Sage")
         {
             GetComponent<Collider>().enabled = false;
             rb.useGravity = false;
@@ -28,6 +28,10 @@ public class PickUp : MonoBehaviour
                 transform.rotation = new Quaternion(-45, 45, 45, 0);
                 MatchEvents.PickUpDrop(true, this.gameObject);
             }
+            else if (gameObject.tag == "Sage") {
+                MatchEvents.PickUpDropSage(true, this.gameObject);
+                Debug.Log("SagePickedUp");
+            }
         }
     }
 
@@ -38,5 +42,6 @@ public class PickUp : MonoBehaviour
         //rb.isKinematic = false;
         rb.useGravity = true;
         MatchEvents.PickUpDrop(false, this.gameObject);
+        MatchEvents.PickUpDropSage(false, this.gameObject);
     }
 }

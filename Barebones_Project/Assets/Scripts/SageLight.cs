@@ -1,0 +1,28 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SageLight : MonoBehaviour
+{
+  private bool candleAdded;
+  private bool matchInHand;
+  private GameObject match;
+  //In a more polished world, I'd combine this with the RitualScripts.
+  void Start() {
+    MatchEvents.ChangeHold += ChangeBool;
+    matchInHand = false;
+    gameObject.transform.GetChild(2).gameObject.SetActive(false);
+  }
+
+  private void OnMouseEnter() {
+      if (matchInHand && match.transform.GetChild(0).gameObject.activeSelf) {
+          gameObject.transform.GetChild(2).gameObject.SetActive(true);
+      }
+  }
+
+  private void ChangeBool(bool tf, GameObject obj) {
+    match = obj;
+    matchInHand = tf;
+    Debug.Log(matchInHand);
+  }
+}
