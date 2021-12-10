@@ -9,15 +9,11 @@ public class MatchEvents {
 
 
   public static void PickUp() {
-    if (PickedUp != null) {
-      PickedUp();
-    }
+
   }
 
 
   public static void PutDown() {
-    if (PutedDown != null) {
-      PutedDown();
-    }
+
   }
 }
