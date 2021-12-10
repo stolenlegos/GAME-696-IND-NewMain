@@ -9,7 +9,12 @@ public class RitualEventsObserver : MonoBehaviour
     [SerializeField]
     private int numActiveElems;
     private int numActiveAshes;  
-    private bool circleActive; 
+    private bool circleActive;
+    private bool _ghostIan; 
+    private bool _ghostAunt;  
+    private bool _ghostChuck; 
+    [SerializeField]
+    private List<GameObject> ghostOrbs; 
     public GameObject halfGhost; 
     public GameObject fullGhost; 
     private void Update() { 
