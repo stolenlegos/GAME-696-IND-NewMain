@@ -3705,8 +3705,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9548125, y: 0.7733842, z: 0.9480325}
-  m_Center: {x: -0.0022603571, y: -0.34603065, z: 0.0011301041}
+  m_Size: {x: 0.9548125, y: 0.7740819, z: 0.9480325}
+  m_Center: {x: -0.0022603571, y: -0.34568182, z: 0.0011301041}
 --- !u!1 &613619468
 GameObject:
   m_ObjectHideFlags: 0
@@ -4301,8 +4301,8 @@ GameObject:
   - component: {fileID: 668060346}
   - component: {fileID: 668060350}
   - component: {fileID: 668060349}
-  - component: {fileID: 668060348}
   - component: {fileID: 668060347}
+  - component: {fileID: 668060348}
   m_Layer: 5
   m_Name: Air Event
   m_TagString: Air
@@ -4344,8 +4344,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectedLight: {fileID: 1461478642}
   elemAdded: 0
---- !u!135 &668060348
-SphereCollider:
+--- !u!65 &668060348
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4355,8 +4355,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.0000001, y: 1.0000002, z: 0.50697124}
+  m_Center: {x: 0.00000025321617, y: -0.00000031375595, z: 0.2465137}
 --- !u!23 &668060349
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8129,27 +8129,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cde0c624fceb4bb4498cafd97ae837f1, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.2266798
+      value: 1.8113154
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cde0c624fceb4bb4498cafd97ae837f1, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.2266799
+      value: 1.8113157
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cde0c624fceb4bb4498cafd97ae837f1, type: 3}
       propertyPath: m_LocalScale.z
-      value: 6.0736475
+      value: 8.9683485
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cde0c624fceb4bb4498cafd97ae837f1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8421
+      value: -0.84355
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cde0c624fceb4bb4498cafd97ae837f1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.6217
+      value: -0.6075
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cde0c624fceb4bb4498cafd97ae837f1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.5765159
+      value: -1.5787
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cde0c624fceb4bb4498cafd97ae837f1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9378,8 +9378,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0000001, y: 1.0000002, z: 0.50633687}
-  m_Center: {x: -0.00000014964365, y: -0.00000022422361, z: 0.24683103}
+  m_Size: {x: 1.0000001, y: 1.0000002, z: 0.5077335}
+  m_Center: {x: -0.00000014972697, y: -0.0000002242225, z: 0.24613215}
 --- !u!23 &1454744687
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9673,8 +9673,8 @@ GameObject:
   - component: {fileID: 1507901168}
   - component: {fileID: 1507901172}
   - component: {fileID: 1507901171}
-  - component: {fileID: 1507901170}
   - component: {fileID: 1507901169}
+  - component: {fileID: 1507901170}
   m_Layer: 5
   m_Name: Fire Event
   m_TagString: Fire
@@ -9716,8 +9716,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectedLight: {fileID: 1906513944}
   elemAdded: 0
---- !u!135 &1507901170
-SphereCollider:
+--- !u!65 &1507901170
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -9727,8 +9727,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.0000001, y: 1.0000002, z: 0.51760364}
+  m_Center: {x: 0.00000007351668, y: 0.00000093971175, z: 0.24119738}
 --- !u!23 &1507901171
 MeshRenderer:
   m_ObjectHideFlags: 0
