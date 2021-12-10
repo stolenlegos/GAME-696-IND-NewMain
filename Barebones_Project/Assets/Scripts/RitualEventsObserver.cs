@@ -7,17 +7,19 @@ public class RitualEventsObserver : MonoBehaviour
     [SerializeField]
     private int numActiveCandles;
     [SerializeField]
-    private int numActiveElems; 
+    private int numActiveElems;
+    private int numActiveAshes;  
     private bool circleActive; 
     public GameObject halfGhost; 
     public GameObject fullGhost; 
     private void Update() { 
-        if (numActiveCandles == 4 || numActiveElems == 4) {
+        if (numActiveCandles == 4) {
             //activate the half ghost object
             halfGhost.SetActive(true); 
         }
 
-        if (numActiveCandles == 4 && numActiveElems == 4) {
+        if (numActiveCandles == 4 && numActiveElems == 4
+        && numActiveAshes == 8) {
             halfGhost.SetActive(false); 
             fullGhost.SetActive(true); 
         }
@@ -25,7 +27,14 @@ public class RitualEventsObserver : MonoBehaviour
 
     private void OnEnable() {
         RitualScripts.IncrementElem += IncrementCount;
-        MatchLight.IncrementCandle += IncrementCount;  
+        MatchLight.IncrementCandle += IncrementCount;
+        AshStepEvent.IncrementAshes += IncrementCount;   
+    }
+
+    private void OnDisable() {
+        RitualScripts.IncrementElem -= IncrementCount;
+        MatchLight.IncrementCandle -= IncrementCount;
+        AshStepEvent.IncrementAshes -= IncrementCount;   
     }
     
     private void IncrementCount(int num, string itemType) {
@@ -34,6 +43,9 @@ public class RitualEventsObserver : MonoBehaviour
         }
         if (itemType == "candle") {
             numActiveCandles += num;
+        }
+        if (itemType == "ashes") {
+            numActiveAshes += num; 
         }
     }
 }
