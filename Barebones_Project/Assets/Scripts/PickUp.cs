@@ -14,7 +14,8 @@ public class PickUp : MonoBehaviour
     
     private void OnMouseDown()
     {
-        if (gameObject.tag == "interactable")
+        if (gameObject.tag == "interactable" || gameObject.tag == "Fire" || gameObject.tag == "Air"
+        || gameObject.tag == "Earth" || gameObject.tag == "Water")
         {
             GetComponent<Collider>().enabled = false; 
             rb.useGravity = false;
@@ -28,7 +29,7 @@ public class PickUp : MonoBehaviour
 
     private void OnMouseUp()
     {
-        GetComponent<Collider>().enabled = false;
+        GetComponent<Collider>().enabled = true;
         this.transform.parent = null;
         //rb.isKinematic = false;  
         rb.useGravity = true; 

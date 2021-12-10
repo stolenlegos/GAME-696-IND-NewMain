@@ -13,8 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
-    bool isGrounded; 
-    
+    bool isGrounded;    
     void Start()
     {
         speed = startingSpeed; 
@@ -32,11 +31,12 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.C)) {
             controller.height *= .50f; 
+            speed /= 2; 
         }
 
         if (Input.GetKeyUp(KeyCode.C)) {
             controller.height /= .50f;
-
+            speed *= 2;
         }
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask); 
         if (isGrounded && velocity. y < 0)
