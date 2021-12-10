@@ -482,8 +482,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.006086497, y: 0.0667668, z: 0.17645478}
-  m_Center: {x: 0.00396215, y: 0.0003319569, z: 0.00009739399}
+  m_Size: {x: 0.01824188, y: 0.14575008, z: 0.25490332}
+  m_Center: {x: 0.0100399265, y: -0.0050818548, z: 0.005244732}
 --- !u!1001 &99583637
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8318,6 +8318,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noHoverMat: {fileID: 2100000, guid: f53a1aabe8f36bd469a4fa84171d28aa, type: 2}
   hoverMat: {fileID: 2100000, guid: f18a0a74b6af39342b234d18d2bfd3ab, type: 2}
+--- !u!114 &1497380590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497380586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57e0569939a0c6d4a99cbcb26cdc6a37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {fileID: 527366549}
+--- !u!54 &1497380591
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497380586}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &1497380592
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497380586}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3147228990652338787, guid: 529728b7e0ef50440b70acb405278cb1, type: 3}
 --- !u!1 &1507901167
 GameObject:
   m_ObjectHideFlags: 0
@@ -8981,8 +9024,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782c6f6c3e9c9b84abbd47744d224e75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noHoverMat: {fileID: 2100000, guid: 598d3d40aaea4a247b43d8274314ae71, type: 2}
-  hoverMat: {fileID: 0}
+  noHoverMat: {fileID: 2100000, guid: 0925a11a27ea8e44ba3d0ef39247ef56, type: 2}
+  hoverMat: {fileID: 2100000, guid: 598d3d40aaea4a247b43d8274314ae71, type: 2}
 --- !u!4 &1661081029 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 871f7fea57343b84fb0a11a03c0f1ac8, type: 3}
