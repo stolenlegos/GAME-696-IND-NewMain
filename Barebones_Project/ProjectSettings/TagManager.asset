@@ -9,6 +9,7 @@ TagManager:
   - Water
   - Fire
   - Earth
+  - Match
   layers:
   - Default
   - TransparentFX
