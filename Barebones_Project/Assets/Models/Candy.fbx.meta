@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 46d65788508c75c428506f038489eb28
+guid: a2e0cd4dc0baeb0489e231c50413b0dc
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: CardBoard Boc
-    second: {fileID: 2100000, guid: 16360b0bf0c89024fa409260b20572ab, type: 2}
+      name: CANDY
+    second: {fileID: 2100000, guid: b3f2fdbde397b3c4b9e5613a205fbc9a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
