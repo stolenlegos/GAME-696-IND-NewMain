@@ -3705,8 +3705,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9548125, y: 0.7695348, z: 0.9480325}
-  m_Center: {x: -0.0022603571, y: -0.34795535, z: 0.0011301041}
+  m_Size: {x: 0.9548125, y: 0.7733842, z: 0.9480325}
+  m_Center: {x: -0.0022603571, y: -0.34603065, z: 0.0011301041}
 --- !u!1 &613619468
 GameObject:
   m_ObjectHideFlags: 0
@@ -8661,7 +8661,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
 --- !u!114 &1391239960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9310,8 +9310,8 @@ GameObject:
   - component: {fileID: 1454744684}
   - component: {fileID: 1454744688}
   - component: {fileID: 1454744687}
-  - component: {fileID: 1454744686}
   - component: {fileID: 1454744685}
+  - component: {fileID: 1454744686}
   m_Layer: 5
   m_Name: Earth Event
   m_TagString: Earth
@@ -9353,8 +9353,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectedLight: {fileID: 320362493}
   elemAdded: 0
---- !u!135 &1454744686
-SphereCollider:
+--- !u!65 &1454744686
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -9364,8 +9364,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.0000001, y: 1.0000002, z: 0.50633687}
+  m_Center: {x: -0.00000014964365, y: -0.00000022422361, z: 0.24683103}
 --- !u!23 &1454744687
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12827,7 +12827,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c01185a1cd293f34ea89b0df2a0423a7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.16
+      value: 0.153
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c01185a1cd293f34ea89b0df2a0423a7, type: 3}
       propertyPath: m_LocalPosition.z

@@ -5,21 +5,23 @@ using UnityEngine;
 public class HoverOutline : MonoBehaviour
 {
 
-    public Material noHoverMat; 
+    public Material noHoverMat;
     public Material hoverMat;
-    MeshRenderer meshRenderer;  
+    MeshRenderer meshRenderer;
 
     void Start()
     {
         meshRenderer = GetComponent<MeshRenderer>();
 
     }
-    
-    private void OnMouseEnter() {  
-        meshRenderer.material = hoverMat; 
+
+    private void OnMouseEnter() {
+        meshRenderer.material = hoverMat;
+        Debug.Log("MATERIAL ACTIVATED");
     }
 
     private void OnMouseExit() {
         meshRenderer.material = noHoverMat;
+        Debug.Log("MATERIAL ACTIVATED");
     }
 }
