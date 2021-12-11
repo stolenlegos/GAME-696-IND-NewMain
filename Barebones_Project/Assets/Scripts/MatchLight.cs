@@ -40,4 +40,17 @@ public class MatchLight : MonoBehaviour
       match = obj;
       matchInHand = tf;
     }
+
+    private void OnEnable() { 
+        RitualEventsObserver.BlowOutCandles += BlowOutCandle; 
+    }
+    private void OnDisable() { 
+        RitualEventsObserver.BlowOutCandles -= BlowOutCandle; 
+    }
+
+    private void BlowOutCandle() {
+        connectedCandle.SetActive(false);
+        candleAdded = false; 
+        IncrementCandle?.Invoke(-1,"candle");
+    }
 }

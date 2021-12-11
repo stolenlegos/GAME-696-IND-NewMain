@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System; 
 
 public class RitualEventsObserver : MonoBehaviour
 {
@@ -16,7 +17,12 @@ public class RitualEventsObserver : MonoBehaviour
     private List<GhostObject> _ghosts; 
     public GameObject currentGhostState;
     private bool _halfGhost; 
-    private bool _fullGhost;  
+    private bool _fullGhost;
+
+    public static event Action ActivateCircle; 
+    private bool _magicSageCircleStateComplete;
+    private bool _candlesStateComplete; 
+    private bool _elementalSpotsStateComplete;  
     
     private void Start() { 
         _ghosts = new List<GhostObject>();
@@ -32,14 +38,28 @@ public class RitualEventsObserver : MonoBehaviour
         _ghosts.Add(chuck);  
         SetCurrentGhostSet();
     }
+
+    public static event Action BlowOutCandles; 
     private void Update() { 
-        if (numActiveCandles == 4) {
+        if (numActiveAshes == 8) {
+            _magicSageCircleStateComplete = true;
+            ActivateCircle?.Invoke();  
+        }
+        
+        if (numActiveElems == 4 && _magicSageCircleStateComplete) {
+            _elementalSpotsStateComplete = true; 
+        }
+        
+        if (numActiveCandles == 4 && _magicSageCircleStateComplete) {
             _halfGhost = true; 
-            SetCurrentGhostSet();  
+            SetCurrentGhostSet();
+            _candlesStateComplete = true;   
+        } else if (numActiveCandles == 4 && !_magicSageCircleStateComplete) { 
+            BlowOutCandles?.Invoke(); 
         }
 
         if (numActiveCandles == 4 && numActiveElems == 4
-        && numActiveAshes == 8) {
+        && numActiveAshes == 8 && _magicSageCircleStateComplete) {
             _halfGhost = false;
             _fullGhost = true;  
             SetCurrentGhostSet(); 
@@ -82,52 +102,6 @@ public class RitualEventsObserver : MonoBehaviour
         }
         SetCurrentGhostSet(); 
     }
-
-    // private void SetCurrentGhostSet() {
-    //     int numVoicesActive = 0; 
-    //     foreach (GhostObject ghost in _ghosts) {
-    //         if (ghost.ghostActive)
-    //             numVoicesActive++; 
-    //     }
-    //     if (numVoicesActive != 1) {
-    //         if (currentGhostState.activeSelf) {
-    //             if (_halfGhost)
-    //                 SwapGhost(_ghosts[0].halfGhost);
-    //             if (_fullGhost)
-    //                 SwapGhost(_ghosts[0].fullGhost); 
-    //         } else {
-    //             if (_halfGhost) {
-    //                 currentGhostState = _ghosts[0].halfGhost; 
-    //                 currentGhostState.SetActive(true); 
-    //             }
-    //             if (_fullGhost) {
-    //                 currentGhostState = _ghosts[0].fullGhost; 
-    //                 currentGhostState.SetActive(true); 
-    //             }  
-    //         } 
-    //     } else {
-    //         for (int i = 0; i < _ghosts.Count; i++) { 
-    //             if (currentGhostState.activeSelf) {
- 
-    //                 if (_ghosts[i].ghostActive) {
-    //                     if (_halfGhost)
-    //                         SwapGhost(_ghosts[i].halfGhost);
-    //                     if (_fullGhost)
-    //                         SwapGhost(_ghosts[i].fullGhost);
-    //                 }
-    //             } else {
-    //                 if (_halfGhost) {
-    //                     currentGhostState = _ghosts[i].halfGhost; 
-    //                     currentGhostState.SetActive(true); 
-    //                 }
-    //                 if (_fullGhost) {
-    //                     currentGhostState = _ghosts[i].fullGhost; 
-    //                     currentGhostState.SetActive(true); 
-    //                 }
-    //             }
-    //         } 
-    //     }
-    // }
     
     private void SetCurrentGhostSet() {
         int numVoicesActive = 0; 
