@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System; 
 
 public class SageLight : MonoBehaviour
 {
@@ -14,9 +15,12 @@ public class SageLight : MonoBehaviour
     gameObject.transform.GetChild(2).gameObject.SetActive(false);
   }
 
+  public static event Action<bool> SageOnFire; 
   private void OnMouseEnter() {
       if (matchInHand && match.transform.GetChild(0).gameObject.activeSelf) {
           gameObject.transform.GetChild(2).gameObject.SetActive(true);
+          SageOnFire?.Invoke(true); 
+
       }
   }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System; 
 
 public class SageStrike : MonoBehaviour
 {
@@ -12,9 +13,11 @@ public class SageStrike : MonoBehaviour
     sageInHand = false;
   }
 
-    private void OnMouseEnter() {
+  public static event Action<bool> SageOnFire; 
+  private void OnMouseEnter() {
         if (sageInHand && gameObject.transform.GetChild(0).gameObject.activeSelf) {
             sage.transform.GetChild(2).gameObject.SetActive(true);
+            SageOnFire?.Invoke(true); 
         }
       }
 

@@ -8,6 +8,7 @@ public class AshStepEvent : MonoBehaviour
 
     [SerializeField]
     private bool _playerHasSage;
+    private bool _sageOnFire; 
     [SerializeField]
     private GameObject associatedAshes; 
     private bool _ashesActivated; 
@@ -19,7 +20,7 @@ public class AshStepEvent : MonoBehaviour
 
     //Again, in a more polished world, I would combine this into Ritual scripts.
     private void OnTriggerEnter(Collider other) { 
-        if (other.tag == "Player" && _playerHasSage) { 
+        if (other.tag == "Player" && _playerHasSage && _sageOnFire) { 
             associatedAshes.SetActive(true); 
             if (!_ashesActivated) {
                 _ashesActivated = true; 
@@ -30,12 +31,23 @@ public class AshStepEvent : MonoBehaviour
 
     private void OnEnable() { 
         SagePickedUp.playerSageUpdate += checkPlayerSage; 
+        SageStrike.SageOnFire += checkFlamingSage;
+        SageLight.SageOnFire += checkFlamingSage; 
+ 
     }
 
     private void OnDisable() {
-        SagePickedUp.playerSageUpdate -= checkPlayerSage; 
+        SagePickedUp.playerSageUpdate -= checkPlayerSage;
+        SageStrike.SageOnFire -= checkFlamingSage;
+        SageLight.SageOnFire -= checkFlamingSage; 
+ 
+ 
     }
     private void checkPlayerSage(bool hasSage) { 
         _playerHasSage = hasSage; 
+    }
+
+    private void checkFlamingSage(bool onFire) {
+        _sageOnFire = onFire; 
     }
 }
