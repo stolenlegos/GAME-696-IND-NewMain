@@ -9,7 +9,10 @@ public class RitualEventsObserver : MonoBehaviour
     private int numActiveCandles;
     [SerializeField]
     private int numActiveElems;
-    private int numActiveAshes;  
+    [SerializeField]
+    private int numActiveAshes;
+    [SerializeField]
+    private int numCandiesInBowl;  
     private bool circleActive;
     [SerializeField]
     private List<GameObject> ghostOrbs;
@@ -19,12 +22,16 @@ public class RitualEventsObserver : MonoBehaviour
     private bool _halfGhost; 
     private bool _fullGhost;
 
-    public static event Action ActivateCircle; 
+    public static event Action ActivateCircle;
+    private bool _bowlFilledComplete;  
     private bool _magicSageCircleStateComplete;
     private bool _candlesStateComplete; 
     private bool _elementalSpotsStateComplete;  
     
     private void Start() { 
+        _magicSageCircleStateComplete = false;
+        _candlesStateComplete = false;
+        _elementalSpotsStateComplete = false;
         _ghosts = new List<GhostObject>();
         _halfGhost = false;
         _fullGhost = false; 
@@ -39,17 +46,21 @@ public class RitualEventsObserver : MonoBehaviour
         SetCurrentGhostSet();
     }
 
-    public static event Action BlowOutCandles; 
+    public static event Action BlowOutCandles;
+    public static event Action NegateGlowingSpots;  
     private void Update() { 
+        if (numCandiesInBowl == 4) { 
+            _bowlFilledComplete = true; 
+        }
         if (numActiveAshes == 8) {
             _magicSageCircleStateComplete = true;
             ActivateCircle?.Invoke();  
         }
-        
         if (numActiveElems == 4 && _magicSageCircleStateComplete) {
             _elementalSpotsStateComplete = true; 
+        } else if (numActiveElems == 4 && !_magicSageCircleStateComplete) {
+            NegateGlowingSpots?.Invoke(); 
         }
-        
         if (numActiveCandles == 4 && _magicSageCircleStateComplete) {
             _halfGhost = true; 
             SetCurrentGhostSet();
@@ -57,9 +68,8 @@ public class RitualEventsObserver : MonoBehaviour
         } else if (numActiveCandles == 4 && !_magicSageCircleStateComplete) { 
             BlowOutCandles?.Invoke(); 
         }
-
-        if (numActiveCandles == 4 && numActiveElems == 4
-        && numActiveAshes == 8 && _magicSageCircleStateComplete) {
+        if (_candlesStateComplete && _elementalSpotsStateComplete
+        && _bowlFilledComplete && _magicSageCircleStateComplete) {
             _halfGhost = false;
             _fullGhost = true;  
             SetCurrentGhostSet(); 
@@ -70,14 +80,16 @@ public class RitualEventsObserver : MonoBehaviour
         RitualScripts.IncrementElem += IncrementCount;
         MatchLight.IncrementCandle += IncrementCount;
         AshStepEvent.IncrementAshes += IncrementCount; 
-        GhostObjDetectTable.ToggleBool += ToggleGhostObjectBool;   
+        GhostObjDetectTable.ToggleBool += ToggleGhostObjectBool;
+        Bowl.IncrementCandy += IncrementCount;    
     }
 
     private void OnDisable() {
         RitualScripts.IncrementElem -= IncrementCount;
         MatchLight.IncrementCandle -= IncrementCount;
         AshStepEvent.IncrementAshes -= IncrementCount;   
-        GhostObjDetectTable.ToggleBool -= ToggleGhostObjectBool;   
+        GhostObjDetectTable.ToggleBool -= ToggleGhostObjectBool;  
+        Bowl.IncrementCandy -= IncrementCount;   
 
     }
     
@@ -90,6 +102,9 @@ public class RitualEventsObserver : MonoBehaviour
         }
         if (itemType == "ashes") {
             numActiveAshes += num; 
+        }
+        if (itemType == "candy") {
+            numCandiesInBowl += num; 
         }
     }
 

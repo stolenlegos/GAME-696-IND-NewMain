@@ -33,5 +33,20 @@ public class RitualScripts : MonoBehaviour
             }
         }
     }
+
+    private void OnEnable() { 
+        RitualEventsObserver.NegateGlowingSpots += ReverseElements; 
+    }
+
+    private void OnDisable() {
+        RitualEventsObserver.NegateGlowingSpots -= ReverseElements; 
+
+    }
+
+    private void ReverseElements() {
+        connectedLight.SetActive(false); 
+        elemAdded = false; 
+        IncrementElem?.Invoke(-1,"element"); 
+    }
     
 }

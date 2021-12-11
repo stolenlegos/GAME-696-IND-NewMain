@@ -15,6 +15,7 @@ TagManager:
   - Candy
   - GhostObj
   - Table
+  - Bowl
   layers:
   - Default
   - TransparentFX
