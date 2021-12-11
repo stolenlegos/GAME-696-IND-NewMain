@@ -4910,6 +4910,7 @@ MonoBehaviour:
   - {fileID: 1827360926}
   - {fileID: 1227522610}
   currentGhostState: {fileID: 1176374085}
+  candyEssence: {fileID: 761384679}
 --- !u!4 &720460326
 Transform:
   m_ObjectHideFlags: 0
@@ -5169,7 +5170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &761384680
 Transform:
   m_ObjectHideFlags: 0
@@ -5191,7 +5192,7 @@ VFXRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 761384679}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -12384,8 +12385,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectedLight: {fileID: 1789342689}
   elemAdded: 0
---- !u!135 &1760363734
-SphereCollider:
+--- !u!65 &1760363734
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -12395,8 +12396,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.0000001, y: 1.0000002, z: 0.50506896}
+  m_Center: {x: -0.00000046293297, y: -3.9257975e-10, z: 0.24746487}
 --- !u!23 &1760363735
 MeshRenderer:
   m_ObjectHideFlags: 0
