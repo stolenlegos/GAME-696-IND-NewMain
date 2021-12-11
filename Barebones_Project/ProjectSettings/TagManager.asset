@@ -12,6 +12,7 @@ TagManager:
   - Match
   - Sage
   - Half Ghost
+  - Candy
   layers:
   - Default
   - TransparentFX
