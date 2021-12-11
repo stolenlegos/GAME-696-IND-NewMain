@@ -83,6 +83,52 @@ public class RitualEventsObserver : MonoBehaviour
         SetCurrentGhostSet(); 
     }
 
+    // private void SetCurrentGhostSet() {
+    //     int numVoicesActive = 0; 
+    //     foreach (GhostObject ghost in _ghosts) {
+    //         if (ghost.ghostActive)
+    //             numVoicesActive++; 
+    //     }
+    //     if (numVoicesActive != 1) {
+    //         if (currentGhostState.activeSelf) {
+    //             if (_halfGhost)
+    //                 SwapGhost(_ghosts[0].halfGhost);
+    //             if (_fullGhost)
+    //                 SwapGhost(_ghosts[0].fullGhost); 
+    //         } else {
+    //             if (_halfGhost) {
+    //                 currentGhostState = _ghosts[0].halfGhost; 
+    //                 currentGhostState.SetActive(true); 
+    //             }
+    //             if (_fullGhost) {
+    //                 currentGhostState = _ghosts[0].fullGhost; 
+    //                 currentGhostState.SetActive(true); 
+    //             }  
+    //         } 
+    //     } else {
+    //         for (int i = 0; i < _ghosts.Count; i++) { 
+    //             if (currentGhostState.activeSelf) {
+ 
+    //                 if (_ghosts[i].ghostActive) {
+    //                     if (_halfGhost)
+    //                         SwapGhost(_ghosts[i].halfGhost);
+    //                     if (_fullGhost)
+    //                         SwapGhost(_ghosts[i].fullGhost);
+    //                 }
+    //             } else {
+    //                 if (_halfGhost) {
+    //                     currentGhostState = _ghosts[i].halfGhost; 
+    //                     currentGhostState.SetActive(true); 
+    //                 }
+    //                 if (_fullGhost) {
+    //                     currentGhostState = _ghosts[i].fullGhost; 
+    //                     currentGhostState.SetActive(true); 
+    //                 }
+    //             }
+    //         } 
+    //     }
+    // }
+    
     private void SetCurrentGhostSet() {
         int numVoicesActive = 0; 
         foreach (GhostObject ghost in _ghosts) {
@@ -91,17 +137,29 @@ public class RitualEventsObserver : MonoBehaviour
             } 
         }
         if (numVoicesActive != 1) {
-            if (_halfGhost)
-                SwapGhost(_ghosts[0].halfGhost);
-            if (_fullGhost)
-                SwapGhost(_ghosts[0].fullGhost); 
+            if ((currentGhostState.name == _ghosts[0].halfGhost.name && _halfGhost) ||
+                (currentGhostState.name == _ghosts[0].fullGhost.name && _fullGhost)) {   
+                return;
+            } else {
+                if (_halfGhost)
+                    SwapGhost(_ghosts[0].halfGhost);
+                if (_fullGhost)
+                    SwapGhost(_ghosts[0].fullGhost);
+                return; 
+            }
         } else {
             for (int i = 0; i < _ghosts.Count; i++) { 
                 if (_ghosts[i].ghostActive) {
-                    if (_halfGhost)
-                        SwapGhost(_ghosts[i].halfGhost);
-                    if (_fullGhost)
-                        SwapGhost(_ghosts[i].fullGhost);
+                    if ((currentGhostState.name == _ghosts[i].halfGhost.name && _halfGhost) ||
+                        (currentGhostState.name == _ghosts[i].fullGhost.name && _fullGhost)) {   
+                        return;
+                    } else {
+                        if (_halfGhost)
+                            SwapGhost(_ghosts[i].halfGhost);
+                        if (_fullGhost)
+                            SwapGhost(_ghosts[i].fullGhost);
+                        return; 
+                    }
                 }
             } 
         }
@@ -113,3 +171,5 @@ public class RitualEventsObserver : MonoBehaviour
             currentGhostState.SetActive(true); 
     }
 }
+
+

@@ -31,7 +31,6 @@ public class PickUp : MonoBehaviour
             }
             else if (gameObject.tag == "Sage") {
                 MatchEvents.PickUpDropSage(true, this.gameObject);
-                Debug.Log("SagePickedUp");
             }
         }
     }
