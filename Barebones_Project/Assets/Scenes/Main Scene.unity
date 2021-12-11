@@ -5923,6 +5923,9 @@ GameObject:
   m_Component:
   - component: {fileID: 914313177}
   - component: {fileID: 914313178}
+  - component: {fileID: 914313181}
+  - component: {fileID: 914313180}
+  - component: {fileID: 914313179}
   m_Layer: 0
   m_Name: White Candle Light
   m_TagString: Untagged
@@ -6007,6 +6010,43 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &914313179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914313176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a108c52f66ccf8e45831b944024df93c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &914313180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914313176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 739e1c084095f834c90e6e14064cb112, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &914313181
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914313176}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0605298, y: 0.06495122, z: 0.17547704}
+  m_Center: {x: -0.0055262893, y: 0.005526324, z: -0.04310514}
 --- !u!1001 &915269544
 PrefabInstance:
   m_ObjectHideFlags: 0
