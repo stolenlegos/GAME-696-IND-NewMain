@@ -12,6 +12,8 @@ TagManager:
   - Match
   - Sage
   - Half Ghost
+  - GhostObj
+  - Table
   layers:
   - Default
   - TransparentFX
