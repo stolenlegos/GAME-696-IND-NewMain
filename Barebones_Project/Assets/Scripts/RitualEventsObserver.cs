@@ -26,7 +26,6 @@ public class RitualEventsObserver : MonoBehaviour
         GhostObject ian = new GhostObject(ghostOrbs[2], ghostOrbs[3], "Ian", "Photo", false );
         GhostObject aunt = new GhostObject(ghostOrbs[4], ghostOrbs[5], "Aunt", "Comb", false);
         GhostObject chuck = new GhostObject(ghostOrbs[6], ghostOrbs[7], "Chuck","Knife", false);
-        Debug.Log("ghost objects: " + _ghosts.Count);
         _ghosts.Add(undecided);
         _ghosts.Add(ian);
         _ghosts.Add(aunt); 
