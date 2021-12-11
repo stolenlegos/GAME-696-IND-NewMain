@@ -8337,6 +8337,7 @@ GameObject:
   - component: {fileID: 1229101445}
   - component: {fileID: 1229101447}
   - component: {fileID: 1229101446}
+  - component: {fileID: 1229101448}
   m_Layer: 0
   m_Name: White Flame
   m_TagString: Untagged
@@ -8435,6 +8436,18 @@ VisualEffect:
       m_Array: []
     m_Bool:
       m_Array: []
+--- !u!114 &1229101448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229101444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15735775ffeb41e4c9c7704303131b3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1260006874 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 394259438650219046, guid: 3536658f1dbfe49409665ccd65e54433, type: 3}
