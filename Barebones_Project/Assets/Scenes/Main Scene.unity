@@ -4855,8 +4855,7 @@ MonoBehaviour:
   - {fileID: 397667142}
   - {fileID: 1227522610}
   - {fileID: 2053962550}
-  halfGhost: {fileID: 797275203}
-  fullGhost: {fileID: 397667142}
+  currentGhostState: {fileID: 0}
 --- !u!4 &720460326
 Transform:
   m_ObjectHideFlags: 0
