@@ -15,7 +15,8 @@ public class PickUp : MonoBehaviour
     private void OnMouseDown()
     {
         if (gameObject.tag == "interactable" || gameObject.tag == "Fire" || gameObject.tag == "Air"
-        || gameObject.tag == "Earth" || gameObject.tag == "Water" || gameObject.tag == "Match" || gameObject.tag == "Sage" || gameObject.tag == "Candy")
+        || gameObject.tag == "Earth" || gameObject.tag == "Water" || gameObject.tag == "Match" || gameObject.tag == "Sage" || gameObject.tag == "Candy"
+        || gameObject.tag == "GhostObj")
         {
             GetComponent<Collider>().enabled = false;
             rb.useGravity = false;

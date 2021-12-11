@@ -13,6 +13,7 @@ TagManager:
   - Sage
   - Half Ghost
   - Candy
+  - GhostObj
   layers:
   - Default
   - TransparentFX
