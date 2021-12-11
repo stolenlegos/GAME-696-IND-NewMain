@@ -12,10 +12,7 @@ TagManager:
   - Match
   - Sage
   - Half Ghost
-  - GhostObj
-  - Table
   - Candy
-  - RandomTag
   layers:
   - Default
   - TransparentFX
@@ -23,7 +20,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Ground
   - 
   - 
   - 
