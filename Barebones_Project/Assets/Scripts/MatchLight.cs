@@ -39,6 +39,5 @@ public class MatchLight : MonoBehaviour
     private void ChangeBool(bool tf, GameObject obj) {
       match = obj;
       matchInHand = tf;
-      Debug.Log(matchInHand);
     }
 }

@@ -4084,6 +4084,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: daadb1bdd92b3f744afe728bb048265e, type: 3}
+      propertyPath: m_TagString
+      value: Table
+      objectReference: {fileID: 0}
     - target: {fileID: 9152363913774390056, guid: daadb1bdd92b3f744afe728bb048265e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -4862,13 +4866,13 @@ MonoBehaviour:
   numActiveElems: 0
   ghostOrbs:
   - {fileID: 1821673593}
-  - {fileID: 797275203}
-  - {fileID: 1827360926}
-  - {fileID: 629848259}
   - {fileID: 985540885}
+  - {fileID: 797275203}
   - {fileID: 397667142}
-  - {fileID: 1227522610}
+  - {fileID: 629848259}
   - {fileID: 2053962550}
+  - {fileID: 1827360926}
+  - {fileID: 1227522610}
   currentGhostState: {fileID: 1176374085}
 --- !u!4 &720460326
 Transform:
@@ -7445,7 +7449,7 @@ Transform:
   - {fileID: 1132065859}
   - {fileID: 2064943851}
   m_Father: {fileID: 1544314200}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1176374085
 GameObject:
@@ -10999,8 +11003,8 @@ Transform:
   - {fileID: 1278994067}
   - {fileID: 1849775297}
   - {fileID: 113264652}
-  - {fileID: 2084612728}
   - {fileID: 1136192816}
+  - {fileID: 2084612728}
   - {fileID: 1652889869}
   - {fileID: 1380172206}
   m_Father: {fileID: 658585474}

@@ -15,13 +15,11 @@ public class SageStrike : MonoBehaviour
     private void OnMouseEnter() {
         if (sageInHand && gameObject.transform.GetChild(0).gameObject.activeSelf) {
             sage.transform.GetChild(2).gameObject.SetActive(true);
-            Debug.Log("Strike sage");
         }
       }
 
     private void ChangeBool(bool tf, GameObject obj) {
       sage = obj;
       sageInHand = tf;
-      Debug.Log(sageInHand);
     }
 }

@@ -14,6 +14,7 @@ TagManager:
   - Half Ghost
   - Candy
   - GhostObj
+  - Table
   layers:
   - Default
   - TransparentFX

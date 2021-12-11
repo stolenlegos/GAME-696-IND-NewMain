@@ -16,7 +16,6 @@ public class HoverOutline_DifObject : MonoBehaviour
     }
     
     private void OnMouseEnter() {  
-        Debug.Log("codeReached");
         meshRenderer.material = hoverMat; 
     }
 

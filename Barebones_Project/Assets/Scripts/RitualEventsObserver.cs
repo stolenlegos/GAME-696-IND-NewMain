@@ -34,7 +34,6 @@ public class RitualEventsObserver : MonoBehaviour
     }
     private void Update() { 
         if (numActiveCandles == 4) {
-            //activate the half ghost object
             _halfGhost = true; 
             SetCurrentGhostSet();  
         }
@@ -87,8 +86,9 @@ public class RitualEventsObserver : MonoBehaviour
     private void SetCurrentGhostSet() {
         int numVoicesActive = 0; 
         foreach (GhostObject ghost in _ghosts) {
-            if (ghost.ghostActive)
-                numVoicesActive++; 
+            if (ghost.ghostActive) {
+                numVoicesActive++;
+            } 
         }
         if (numVoicesActive != 1) {
             if (_halfGhost)
@@ -108,8 +108,8 @@ public class RitualEventsObserver : MonoBehaviour
     }
 
     private void SwapGhost(GameObject newGhost) { 
-                currentGhostState.SetActive(false); 
-                currentGhostState = newGhost; 
-                currentGhostState.SetActive(true); 
+            currentGhostState.SetActive(false); 
+            currentGhostState = newGhost;
+            currentGhostState.SetActive(true); 
     }
 }
