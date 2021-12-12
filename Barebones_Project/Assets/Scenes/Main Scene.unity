@@ -9562,6 +9562,101 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noHoverMat: {fileID: 2100000, guid: 71e8bc2a50001c149b0215016271497c, type: 2}
   hoverMat: {fileID: 2100000, guid: fb6f614a26933b741b6c3a00d04f7d0a, type: 2}
+--- !u!1001 &1363453366
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1661081029}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 2e60d9dbc37e73f4d99f1108760a2d93, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2e60d9dbc37e73f4d99f1108760a2d93, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.557267
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2e60d9dbc37e73f4d99f1108760a2d93, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.8279228
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2e60d9dbc37e73f4d99f1108760a2d93, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00015410036
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2e60d9dbc37e73f4d99f1108760a2d93, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7972773
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2e60d9dbc37e73f4d99f1108760a2d93, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2e60d9dbc37e73f4d99f1108760a2d93, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.6036134
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2e60d9dbc37e73f4d99f1108760a2d93, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2e60d9dbc37e73f4d99f1108760a2d93, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2e60d9dbc37e73f4d99f1108760a2d93, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -74.258
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2e60d9dbc37e73f4d99f1108760a2d93, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2e60d9dbc37e73f4d99f1108760a2d93, type: 3}
+      propertyPath: m_Name
+      value: Phone.fbx
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2e60d9dbc37e73f4d99f1108760a2d93, type: 3}
+--- !u!1 &1363453367 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -845712660158851041, guid: 2e60d9dbc37e73f4d99f1108760a2d93, type: 3}
+  m_PrefabInstance: {fileID: 1363453366}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1363453368 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2e60d9dbc37e73f4d99f1108760a2d93, type: 3}
+  m_PrefabInstance: {fileID: 1363453366}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1363453369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363453368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd0f47dbca36a546b64947607bbd871, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToChange: {fileID: 1363453367}
+  noHoverMat: {fileID: 2100000, guid: f297813d359da1f45b54de0e4f549789, type: 2}
+  hoverMat: {fileID: 2100000, guid: c4ab65fe794b20843bec3f4e8a435a6a, type: 2}
+--- !u!65 &1363453370
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363453368}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.07974878, y: 0.019789018, z: 0.15750583}
+  m_Center: {x: 0.00027425212, y: 0.009573478, z: 0.003407121}
 --- !u!1001 &1368664536
 PrefabInstance:
   m_ObjectHideFlags: 0
