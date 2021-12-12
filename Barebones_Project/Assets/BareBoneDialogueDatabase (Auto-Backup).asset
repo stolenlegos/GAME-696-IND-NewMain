@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 935899b62f48ae5498594680ed17d133, type: 3}
-  m_Name: BareBoneDialogueDatabase
+  m_Name: BareBoneDialogueDatabase (Auto-Backup)
   m_EditorClassIdentifier: 
   version: 
   author: Ilia K and Sam S
@@ -2222,8 +2222,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "\u201CBest way to get in contact with him would be through text.
-          He probably won\u2019t respond though, so just keep that in mind.\u201D "
+        value: 
         type: 0
         typeString: 
       - title: Sequence
@@ -2245,7 +2244,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["Landlord_Conversation"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2469,7 +2468,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["Aunt_Paula_Conversation"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2685,7 +2684,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["Ian_Initial_Convo"] = false
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2696,8 +2695,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 28.210264, y: 32.15364}
-    canvasZoom: 0.46000046
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.43000045
   syncInfo:
     syncActors: 0
     syncItems: 0
