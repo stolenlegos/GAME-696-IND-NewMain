@@ -7,6 +7,8 @@ public class FadeThatShit : MonoBehaviour {
   [SerializeField] private Animator darkness;
   [SerializeField] private Animator text;
   [SerializeField] private Animator quitText;
+  [SerializeField] private Animator creditText;
+  [SerializeField] private GameObject creditsText;
 
   private bool gameOverManGameOver;
 
@@ -22,11 +24,15 @@ public class FadeThatShit : MonoBehaviour {
 
     yield return new WaitForSeconds(2);
     quitText.SetBool("TextGo", true);
+    creditText.SetBool("TextGo", true);
   }
 
   void Update () {
     if (Input.GetKeyDown(KeyCode.Escape) && gameOverManGameOver) {
       Application.Quit();
+    } else if (Input.GetKeyDown(KeyCode.E) && gameOverManGameOver) {
+      text.gameObject.SetActive(false);
+      creditsText.SetActive(true);
     }
   }
 }
