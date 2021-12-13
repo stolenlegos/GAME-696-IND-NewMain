@@ -4664,6 +4664,7 @@ GameObject:
   m_Component:
   - component: {fileID: 632280953}
   - component: {fileID: 632280952}
+  - component: {fileID: 632280954}
   m_Layer: 0
   m_Name: Thoughts
   m_TagString: Untagged
@@ -4683,11 +4684,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: 16
+  trigger: 8
   condition:
     luaConditions: []
     questConditions: []
-    acceptedTags: []
+    acceptedTags:
+    - Player
     acceptedGameObjects: []
     luaWizardIndex: -1
     lastEvaluationValue: 0
@@ -4747,12 +4749,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 632280951}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.529, y: 0.9954, z: 0.309}
+  m_LocalPosition: {x: -0.582, y: 0.847, z: 0.678}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &632280954
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632280951}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.868906, y: 1, z: 1}
+  m_Center: {x: -0.434453, y: 0, z: 0}
 --- !u!1001 &638248709
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9683,11 +9698,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11424616, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: controlCursorState
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11424616, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: detectMouseControl
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11424616, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: onUseMouse.m_PersistentCalls.m_Calls.Array.size
