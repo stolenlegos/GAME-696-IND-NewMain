@@ -708,7 +708,7 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: "\u201COkay, first things first, I have to set up the ritual. I wrote
-          down the order of things in my notebook, so I will check that.\u201D"
+          down the order of things on my phone, so I will check that.\u201D"
         type: 0
         typeString: 
       - title: Sequence
