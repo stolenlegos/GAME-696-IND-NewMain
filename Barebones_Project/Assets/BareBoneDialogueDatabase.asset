@@ -918,20 +918,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\"The Circle is Cast and we are between the worlds, beyond the bounds
+        value: '"The Circle is Cast and we are between the worlds, beyond the bounds
           of time, where night and day, birth and death, joy and sorrow, meet as
-          one. \r\nGuardians of the north, elementals of earth, hail, and welcome.
-          \r\nGuardians of the east, elementals of air, hail, and welcome. \r\nGuardians
-          of the south, elementals of fire, hail, and welcome. \r\nGuardians of the
-          west, elementals of water, hail, and welcome. \r\nThe center, the spirit,
-          the life, the great power, I call upon you to part the veil. \r\nOn this
-          sacred Samhain eve, Ian I invite you to the waking world.\nThe center,
-          the spirit, the life, the great power, I ask of you to restore the veil.
-          \r\nGuardians, patrons, and friends, here we close our ritual with sincere
-          gratitude. Stay if you will, but go if you must. In perfect love and perfect
-          trust, hail, and farewell. Elementals of the north, the south, the east,
-          and the west. Hail, and farewell. \r\nThe circle is open, but unbroken.
-          Merry meet, and merry part, and merry meet again. \""
+          one."'
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -949,7 +938,7 @@ MonoBehaviour:
       - originConversationID: 2
         originDialogueID: 1
         destinationConversationID: 2
-        destinationDialogueID: 2
+        destinationDialogueID: 36
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -960,7 +949,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 236.81815
-        y: 24.545456
+        y: 23.725784
         width: 160
         height: 30
     - id: 2
@@ -1014,8 +1003,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 435.6818
-        y: 25.818192
+        x: 719.3853
+        y: 11.404381
         width: 160
         height: 30
     - id: 3
@@ -1070,8 +1059,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 618.6363
-        y: 25.818207
+        x: 897.01324
+        y: 76.70729
         width: 160
         height: 30
     - id: 4
@@ -2902,9 +2891,69 @@ MonoBehaviour:
         y: 818.05383
         width: 160
         height: 30
+    - id: 36
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 8
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "\"Guardians of the north, elementals of earth, hail, and welcome.
+          \r\nGuardians of the east, elementals of air, hail, and welcome. \r\nGuardians
+          of the south, elementals of fire, hail, and welcome. \r\nGuardians of the
+          west, elementals of water, hail, and welcome. \r\n\nThe center, the spirit,
+          the life, the great power, I call upon you to part the veil. \r\n\nOn this
+          sacred Samhain eve, Ian I invite you to the waking world. \""
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 36
+        destinationConversationID: 2
+        destinationDialogueID: 2
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 436.73254
+        y: 16.573761
+        width: 160
+        height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.46000046
+    canvasZoom: 0.75999993
   - id: 3
     fields:
     - title: Title
@@ -5312,8 +5361,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1301.3157, y: 5.263153}
-    canvasZoom: 0.7600002
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.55000013
   - id: 4
     fields:
     - title: Title
@@ -5436,24 +5485,17 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "The Circle is Cast and we are between the worlds, beyond the bounds
+        value: The Circle is Cast and we are between the worlds, beyond the bounds
           of time, where night and day, birth and death, joy and sorrow, meet as
-          one. \r\nGuardians of the north, elementals of earth, hail, and welcome.
-          \r\nGuardians of the east, elementals of air, hail, and welcome. \r\nGuardians
-          of the south, elementals of fire, hail, and welcome. \r\nGuardians of the
-          west, elementals of water, hail, and welcome. \r\nThe center, the spirit,
-          the life, the great power, I call upon you to part the veil. \r\nOn this
-          sacred Samhain eve, I call you, Paula, to the waking world.\nThe center,
-          the spirit, the life, the great power, I ask of you to restore the veil.
-          \r\nGuardians, patrons, and friends, here we close our ritual with sincere
-          gratitude. Stay if you will, but go if you must. In perfect love and perfect
-          trust, hail, and farewell. Elementals of the north, the south, the east,
-          and the west. Hail, and farewell. \r\nThe circle is open, but unbroken.
-          Merry meet, and merry part, and merry meet again. \r"
+          one.
         type: 0
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
         type: 0
         typeString: 
       conversationID: 4
@@ -5467,7 +5509,7 @@ MonoBehaviour:
       - originConversationID: 4
         originDialogueID: 1
         destinationConversationID: 4
-        destinationDialogueID: 2
+        destinationDialogueID: 21
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -5532,8 +5574,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 256.85226
-        y: 71.186066
+        x: 470.61377
+        y: 48.250298
         width: 160
         height: 30
     - id: 3
@@ -5588,8 +5630,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 471.77753
-        y: 71.93237
+        x: 744.2545
+        y: 73.76723
         width: 160
         height: 30
     - id: 4
@@ -6322,9 +6364,73 @@ MonoBehaviour:
         y: 337.60413
         width: 160
         height: 30
+    - id: 21
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 8
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "Guardians of the north, elementals of earth, hail, and welcome. \r\nGuardians
+          of the east, elementals of air, hail, and welcome. \r\nGuardians of the
+          south, elementals of fire, hail, and welcome. \r\nGuardians of the west,
+          elementals of water, hail, and welcome. \r\n\nThe center, the spirit, the
+          life, the great power, I call upon you to part the veil. \r\n\nOn this
+          sacred Samhain eve, I call you, Paula, to the waking world."
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 21
+        destinationConversationID: 4
+        destinationDialogueID: 2
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 262.03656
+        y: 44.71325
+        width: 160
+        height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.6700003
+    canvasZoom: 1.0600001
   - id: 5
     fields:
     - title: Title
@@ -10561,24 +10667,17 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "The Circle is Cast and we are between the worlds, beyond the bounds
+        value: The Circle is Cast and we are between the worlds, beyond the bounds
           of time, where night and day, birth and death, joy and sorrow, meet as
-          one. \r\nGuardians of the north, elementals of earth, hail, and welcome.
-          \r\nGuardians of the east, elementals of air, hail, and welcome. \r\nGuardians
-          of the south, elementals of fire, hail, and welcome. \r\nGuardians of the
-          west, elementals of water, hail, and welcome. \r\nThe center, the spirit,
-          the life, the great power, I call upon you to part the veil. \r\nOn this
-          sacred Samhain eve, I invite you, Chuck, to the waking world.\nThe center,
-          the spirit, the life, the great power, I ask of you to restore the veil.
-          \r\nGuardians, patrons, and friends, here we close our ritual with sincere
-          gratitude. Stay if you will, but go if you must. In perfect love and perfect
-          trust, hail, and farewell. Elementals of the north, the south, the east,
-          and the west. Hail, and farewell. \r\nThe circle is open, but unbroken.
-          Merry meet, and merry part, and merry meet again. \r"
+          one.
         type: 0
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
         type: 0
         typeString: 
       conversationID: 8
@@ -10592,7 +10691,7 @@ MonoBehaviour:
       - originConversationID: 8
         originDialogueID: 9
         destinationConversationID: 8
-        destinationDialogueID: 1
+        destinationDialogueID: 20
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -11179,9 +11278,73 @@ MonoBehaviour:
         y: 870
         width: 160
         height: 30
+    - id: 20
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 8
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "Guardians of the north, elementals of earth, hail, and welcome. \r\nGuardians
+          of the east, elementals of air, hail, and welcome. \r\nGuardians of the
+          south, elementals of fire, hail, and welcome. \r\nGuardians of the west,
+          elementals of water, hail, and welcome. \r\n\nThe center, the spirit, the
+          life, the great power, I call upon you to part the veil. \r\n\nOn this
+          sacred Samhain eve, I invite you, Chuck, to the waking world."
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 0
+        typeString: 
+      conversationID: 8
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 8
+        originDialogueID: 20
+        destinationConversationID: 8
+        destinationDialogueID: 1
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 260
+        y: 135.7234
+        width: 160
+        height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.34000045
+    canvasZoom: 0.7600002
   syncInfo:
     syncActors: 0
     syncItems: 0

@@ -258,6 +258,20 @@ MonoBehaviour:
   items: []
   locations: []
   variables:
+  - id: 15
+    fields:
+    - title: Name
+      value: Account for Key/Gun Info
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: controlling story spiraling
+      type: 0
+      typeString: 
   - id: 7
     fields:
     - title: Name
@@ -279,7 +293,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Initial Value
-      value: False
+      value: True
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -314,6 +328,20 @@ MonoBehaviour:
       value: True after first convo with aunt
       type: 0
       typeString: 
+  - id: 13
+    fields:
+    - title: Name
+      value: Chuck Conversation
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: checks if you can talk to chuck
+      type: 0
+      typeString: 
   - id: 9
     fields:
     - title: Name
@@ -340,6 +368,34 @@ MonoBehaviour:
       typeString: CustomFieldType_Boolean
     - title: Description
       value: Lets Player text landlord
+      type: 0
+      typeString: 
+  - id: 12
+    fields:
+    - title: Name
+      value: Landlord talked to
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: true if Landlord talked to
+      type: 0
+      typeString: 
+  - id: 14
+    fields:
+    - title: Name
+      value: Murder Solved
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: You figured it out
       type: 0
       typeString: 
   - id: 4
@@ -384,20 +440,6 @@ MonoBehaviour:
       value: shopkeeper options exhausted
       type: 0
       typeString: 
-  - id: 6
-    fields:
-    - title: Name
-      value: Spare Key Info
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: True
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: info about spare key
-      type: 0
-      typeString: 
   - id: 11
     fields:
     - title: Name
@@ -412,10 +454,10 @@ MonoBehaviour:
       value: 'true if Shopkeeper talked to '
       type: 0
       typeString: 
-  - id: 12
+  - id: 6
     fields:
     - title: Name
-      value: Landlord talked to
+      value: Spare Key Info
       type: 0
       typeString: 
     - title: Initial Value
@@ -423,35 +465,7 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
-      value: true if Landlord talked to
-      type: 0
-      typeString: 
-  - id: 13
-    fields:
-    - title: Name
-      value: Chuck Conversation
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: checks if you can talk to chuck
-      type: 0
-      typeString: 
-  - id: 14
-    fields:
-    - title: Name
-      value: Murder Solved
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: You figured it out
+      value: info about spare key
       type: 0
       typeString: 
   conversations:
@@ -694,7 +708,7 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: "\u201COkay, first things first, I have to set up the ritual. I wrote
-          down the order of things in my notebook, so I will check that.\u201D"
+          down the order of things on my phone, so I will check that.\u201D"
         type: 0
         typeString: 
       - title: Sequence
@@ -904,20 +918,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\"The Circle is Cast and we are between the worlds, beyond the bounds
+        value: '"The Circle is Cast and we are between the worlds, beyond the bounds
           of time, where night and day, birth and death, joy and sorrow, meet as
-          one. \r\nGuardians of the north, elementals of earth, hail, and welcome.
-          \r\nGuardians of the east, elementals of air, hail, and welcome. \r\nGuardians
-          of the south, elementals of fire, hail, and welcome. \r\nGuardians of the
-          west, elementals of water, hail, and welcome. \r\nThe center, the spirit,
-          the life, the great power, I call upon you to part the veil. \r\nOn this
-          sacred Samhain eve, Ian I invite you to the waking world.\nThe center,
-          the spirit, the life, the great power, I ask of you to restore the veil.
-          \r\nGuardians, patrons, and friends, here we close our ritual with sincere
-          gratitude. Stay if you will, but go if you must. In perfect love and perfect
-          trust, hail, and farewell. Elementals of the north, the south, the east,
-          and the west. Hail, and farewell. \r\nThe circle is open, but unbroken.
-          Merry meet, and merry part, and merry meet again. \""
+          one."'
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -935,7 +938,7 @@ MonoBehaviour:
       - originConversationID: 2
         originDialogueID: 1
         destinationConversationID: 2
-        destinationDialogueID: 2
+        destinationDialogueID: 36
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -946,7 +949,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 236.81815
-        y: 24.545456
+        y: 23.725784
         width: 160
         height: 30
     - id: 2
@@ -1000,8 +1003,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 435.6818
-        y: 25.818192
+        x: 719.3853
+        y: 11.404381
         width: 160
         height: 30
     - id: 3
@@ -1056,8 +1059,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 618.6363
-        y: 25.818207
+        x: 897.01324
+        y: 76.70729
         width: 160
         height: 30
     - id: 4
@@ -2888,9 +2891,69 @@ MonoBehaviour:
         y: 818.05383
         width: 160
         height: 30
+    - id: 36
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 8
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "\"Guardians of the north, elementals of earth, hail, and welcome.
+          \r\nGuardians of the east, elementals of air, hail, and welcome. \r\nGuardians
+          of the south, elementals of fire, hail, and welcome. \r\nGuardians of the
+          west, elementals of water, hail, and welcome. \r\n\nThe center, the spirit,
+          the life, the great power, I call upon you to part the veil. \r\n\nOn this
+          sacred Samhain eve, Ian I invite you to the waking world. \""
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 36
+        destinationConversationID: 2
+        destinationDialogueID: 2
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 436.73254
+        y: 16.573761
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.46000046
+    canvasScrollPosition: {x: 137.39388, y: 45.858513}
+    canvasZoom: 0.59000045
   - id: 3
     fields:
     - title: Title
@@ -3305,7 +3368,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["Aunt_Talked_To"] == true and (Variable["Chuck_Conversation"]
-        == false)
+        == false) and (Variable["Aunt_Mad"] == true)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -3587,7 +3650,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Ian_Apology"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -3803,7 +3866,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Ian_Apology"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -3908,8 +3971,7 @@ MonoBehaviour:
         destinationDialogueID: 36
         isConnector: 0
         priority: 2
-      conditionsString: 'Variable["Chuck_Conversation"] == true and (Variable["Chuck_Conversation"]
-        == false) and '
+      conditionsString: Variable["Chuck_Conversation"] == true
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -3965,7 +4027,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["Aunt_Mad"] == false and (Variable["Spare_Key_Info"]
-        == true) and (Variable["Aunt_Gun_Info"] == false) and (Variable["Chuck_Conversation"]
+        == true) and (Variable["Chuck_Conversation"] == false) and (Variable["Account_for_Key_Gun_Info"]
         == false)
       userScript: 
       onExecute:
@@ -3973,7 +4035,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1141.8959
+        x: 1140.4033
         y: 182.17929
         width: 160
         height: 30
@@ -4675,13 +4737,13 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Account_for_Key_Gun_Info"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1029.4446
+        x: 1030.9371
         y: 389.5193
         width: 160
         height: 30
@@ -4952,7 +5014,7 @@ MonoBehaviour:
         destinationDialogueID: 40
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Murder_Solved"] == true
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -4960,7 +5022,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1889.8903
-        y: 198.15363
+        y: 194.20624
         width: 160
         height: 30
     - id: 36
@@ -5165,7 +5227,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 267ebdb1-c1f0-47ca-acd5-16db3b6f6d83
+        value: e64afbdd-e372-480c-9f5a-216f7e14e74d
         type: 0
         typeString: 
       conversationID: 3
@@ -5219,6 +5281,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: e6058c00-c315-4f04-a5ee-0dea45a6b4d5
+        type: 0
+        typeString: 
       conversationID: 3
       isRoot: 0
       isGroup: 0
@@ -5228,7 +5294,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["Murder_Solved"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -5279,25 +5345,24 @@ MonoBehaviour:
       - originConversationID: 3
         originDialogueID: 41
         destinationConversationID: 3
-        destinationDialogueID: 31
+        destinationDialogueID: 28
         isConnector: 0
         priority: 2
       conditionsString: Variable["Aunt_Gun_Info"] == true and (Variable["Aunt_Mad"]
-        == false) and (Variable["Spare_Key_Info"] == true) and (Variable["Chuck_Conversation"]
-        == false)
+        == false) and (Variable["Chuck_Conversation"] == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1421.3696
-        y: 194.07144
+        x: 1452.7129
+        y: 189.59384
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 702.98474, y: 0}
-    canvasZoom: 0.6700003
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.55000013
   - id: 4
     fields:
     - title: Title
@@ -5420,24 +5485,17 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "The Circle is Cast and we are between the worlds, beyond the bounds
+        value: The Circle is Cast and we are between the worlds, beyond the bounds
           of time, where night and day, birth and death, joy and sorrow, meet as
-          one. \r\nGuardians of the north, elementals of earth, hail, and welcome.
-          \r\nGuardians of the east, elementals of air, hail, and welcome. \r\nGuardians
-          of the south, elementals of fire, hail, and welcome. \r\nGuardians of the
-          west, elementals of water, hail, and welcome. \r\nThe center, the spirit,
-          the life, the great power, I call upon you to part the veil. \r\nOn this
-          sacred Samhain eve, I call you, Paula, to the waking world.\nThe center,
-          the spirit, the life, the great power, I ask of you to restore the veil.
-          \r\nGuardians, patrons, and friends, here we close our ritual with sincere
-          gratitude. Stay if you will, but go if you must. In perfect love and perfect
-          trust, hail, and farewell. Elementals of the north, the south, the east,
-          and the west. Hail, and farewell. \r\nThe circle is open, but unbroken.
-          Merry meet, and merry part, and merry meet again. \r"
+          one.
         type: 0
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
         type: 0
         typeString: 
       conversationID: 4
@@ -5451,7 +5509,7 @@ MonoBehaviour:
       - originConversationID: 4
         originDialogueID: 1
         destinationConversationID: 4
-        destinationDialogueID: 2
+        destinationDialogueID: 21
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -5516,8 +5574,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 256.85226
-        y: 71.186066
+        x: 470.61377
+        y: 48.250298
         width: 160
         height: 30
     - id: 3
@@ -5572,8 +5630,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 471.77753
-        y: 71.93237
+        x: 744.2545
+        y: 73.76723
         width: 160
         height: 30
     - id: 4
@@ -6240,7 +6298,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Aunt_Talked_To"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -6306,9 +6364,73 @@ MonoBehaviour:
         y: 337.60413
         width: 160
         height: 30
+    - id: 21
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 8
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "Guardians of the north, elementals of earth, hail, and welcome. \r\nGuardians
+          of the east, elementals of air, hail, and welcome. \r\nGuardians of the
+          south, elementals of fire, hail, and welcome. \r\nGuardians of the west,
+          elementals of water, hail, and welcome. \r\n\nThe center, the spirit, the
+          life, the great power, I call upon you to part the veil. \r\n\nOn this
+          sacred Samhain eve, I call you, Paula, to the waking world."
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 21
+        destinationConversationID: 4
+        destinationDialogueID: 2
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 262.03656
+        y: 44.71325
+        width: 160
+        height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.6700003
+    canvasZoom: 1.0600001
   - id: 5
     fields:
     - title: Title
@@ -8460,6 +8582,12 @@ MonoBehaviour:
         destinationDialogueID: 21
         isConnector: 0
         priority: 2
+      - originConversationID: 7
+        originDialogueID: 3
+        destinationConversationID: 7
+        destinationDialogueID: 30
+        isConnector: 0
+        priority: 2
       conditionsString: Variable["Aunt_Mad"] == false
       userScript: 
       onExecute:
@@ -9408,7 +9536,7 @@ MonoBehaviour:
         destinationDialogueID: 22
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Shopkeeper_pushed"] == true
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -9917,8 +10045,57 @@ MonoBehaviour:
         y: 282.57983
         width: 160
         height: 30
+    - id: 30
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Goodbye.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 7
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 640.52094
+        y: 73.84038
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 494.2855, y: 1.4285889}
+    canvasScrollPosition: {x: 57.14279, y: 0}
     canvasZoom: 0.7000003
   - id: 8
     fields:
@@ -10490,24 +10667,17 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "The Circle is Cast and we are between the worlds, beyond the bounds
+        value: The Circle is Cast and we are between the worlds, beyond the bounds
           of time, where night and day, birth and death, joy and sorrow, meet as
-          one. \r\nGuardians of the north, elementals of earth, hail, and welcome.
-          \r\nGuardians of the east, elementals of air, hail, and welcome. \r\nGuardians
-          of the south, elementals of fire, hail, and welcome. \r\nGuardians of the
-          west, elementals of water, hail, and welcome. \r\nThe center, the spirit,
-          the life, the great power, I call upon you to part the veil. \r\nOn this
-          sacred Samhain eve, I invite you, Chuck, to the waking world.\nThe center,
-          the spirit, the life, the great power, I ask of you to restore the veil.
-          \r\nGuardians, patrons, and friends, here we close our ritual with sincere
-          gratitude. Stay if you will, but go if you must. In perfect love and perfect
-          trust, hail, and farewell. Elementals of the north, the south, the east,
-          and the west. Hail, and farewell. \r\nThe circle is open, but unbroken.
-          Merry meet, and merry part, and merry meet again. \r"
+          one.
         type: 0
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
         type: 0
         typeString: 
       conversationID: 8
@@ -10521,7 +10691,7 @@ MonoBehaviour:
       - originConversationID: 8
         originDialogueID: 9
         destinationConversationID: 8
-        destinationDialogueID: 1
+        destinationDialogueID: 20
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -11048,11 +11218,11 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 10
         type: 5
@@ -11064,19 +11234,19 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "\u201CIt has been my ghostly pleasure.\u201D"
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: EventGuid
-        value: 1c4ae392-ac64-49ad-8291-affb144301c4
+        value: 18cbd523-7be5-4bc6-bd89-b6994167fa2b
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       conversationID: 8
       isRoot: 0
       isGroup: 0
@@ -11089,16 +11259,92 @@ MonoBehaviour:
       userScript: Variable["Murder_Solved"] = true
       onExecute:
         m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: 
+            m_MethodName: 
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      canvasRect:
+        serializedVersion: 2
+        x: 24.95993
+        y: 870
+        width: 160
+        height: 30
+    - id: 20
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 8
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "Guardians of the north, elementals of earth, hail, and welcome. \r\nGuardians
+          of the east, elementals of air, hail, and welcome. \r\nGuardians of the
+          south, elementals of fire, hail, and welcome. \r\nGuardians of the west,
+          elementals of water, hail, and welcome. \r\n\nThe center, the spirit, the
+          life, the great power, I call upon you to part the veil. \r\n\nOn this
+          sacred Samhain eve, I invite you, Chuck, to the waking world."
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 0
+        typeString: 
+      conversationID: 8
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 8
+        originDialogueID: 20
+        destinationConversationID: 8
+        destinationDialogueID: 1
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 27.901108
-        y: 870
+        x: 260
+        y: 135.7234
         width: 160
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.52000046
+    canvasZoom: 0.7600002
   syncInfo:
     syncActors: 0
     syncItems: 0
