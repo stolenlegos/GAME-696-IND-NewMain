@@ -258,6 +258,20 @@ MonoBehaviour:
   items: []
   locations: []
   variables:
+  - id: 15
+    fields:
+    - title: Name
+      value: Account for Key/Gun Info
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: controlling story spiraling
+      type: 0
+      typeString: 
   - id: 7
     fields:
     - title: Name
@@ -279,7 +293,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Initial Value
-      value: False
+      value: True
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -314,6 +328,20 @@ MonoBehaviour:
       value: True after first convo with aunt
       type: 0
       typeString: 
+  - id: 13
+    fields:
+    - title: Name
+      value: Chuck Conversation
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: checks if you can talk to chuck
+      type: 0
+      typeString: 
   - id: 9
     fields:
     - title: Name
@@ -340,6 +368,34 @@ MonoBehaviour:
       typeString: CustomFieldType_Boolean
     - title: Description
       value: Lets Player text landlord
+      type: 0
+      typeString: 
+  - id: 12
+    fields:
+    - title: Name
+      value: Landlord talked to
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: true if Landlord talked to
+      type: 0
+      typeString: 
+  - id: 14
+    fields:
+    - title: Name
+      value: Murder Solved
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: You figured it out
       type: 0
       typeString: 
   - id: 4
@@ -384,20 +440,6 @@ MonoBehaviour:
       value: shopkeeper options exhausted
       type: 0
       typeString: 
-  - id: 6
-    fields:
-    - title: Name
-      value: Spare Key Info
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: True
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: info about spare key
-      type: 0
-      typeString: 
   - id: 11
     fields:
     - title: Name
@@ -412,10 +454,10 @@ MonoBehaviour:
       value: 'true if Shopkeeper talked to '
       type: 0
       typeString: 
-  - id: 12
+  - id: 6
     fields:
     - title: Name
-      value: Landlord talked to
+      value: Spare Key Info
       type: 0
       typeString: 
     - title: Initial Value
@@ -423,35 +465,7 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
-      value: true if Landlord talked to
-      type: 0
-      typeString: 
-  - id: 13
-    fields:
-    - title: Name
-      value: Chuck Conversation
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: checks if you can talk to chuck
-      type: 0
-      typeString: 
-  - id: 14
-    fields:
-    - title: Name
-      value: Murder Solved
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: You figured it out
+      value: info about spare key
       type: 0
       typeString: 
   conversations:
@@ -3082,6 +3096,12 @@ MonoBehaviour:
         destinationDialogueID: 35
         isConnector: 0
         priority: 2
+      - originConversationID: 3
+        originDialogueID: 1
+        destinationConversationID: 3
+        destinationDialogueID: 41
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -3131,7 +3151,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 
+      conditionsString: Variable["Chuck_Conversation"] == false
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -3187,7 +3207,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: (Variable["Shopkeeper_talked_to_"] == true) and (Variable["Shopkeeper_pushed"]
-        == false)
+        == false) and (Variable["Chuck_Conversation"] == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -3242,7 +3262,8 @@ MonoBehaviour:
         destinationDialogueID: 15
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Landlord_talked_to"] == true
+      conditionsString: Variable["Landlord_talked_to"] == true and (Variable["Chuck_Conversation"]
+        == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -3250,7 +3271,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 414.4228
-        y: 191.03162
+        y: 189.5391
         width: 160
         height: 30
     - id: 5
@@ -3297,7 +3318,8 @@ MonoBehaviour:
         destinationDialogueID: 6
         isConnector: 0
         priority: 2
-      conditionsString: Variable["Aunt_Talked_To"] == true
+      conditionsString: Variable["Aunt_Talked_To"] == true and (Variable["Chuck_Conversation"]
+        == false) and (Variable["Aunt_Mad"] == true)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -3419,7 +3441,7 @@ MonoBehaviour:
         destinationDialogueID: 11
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Shopkeeper_pushed"] == true
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -3579,7 +3601,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Ian_Apology"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -3795,7 +3817,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Ian_Apology"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -3907,8 +3929,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1505.0345
-        y: 187.32901
+        x: 1702.0493
+        y: 194.79166
         width: 160
         height: 30
     - id: 17
@@ -3956,15 +3978,16 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["Aunt_Mad"] == false and (Variable["Spare_Key_Info"]
-        == true)
+        == true) and (Variable["Chuck_Conversation"] == false) and (Variable["Account_for_Key_Gun_Info"]
+        == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1140.4034
-        y: 188.14944
+        x: 1140.4033
+        y: 182.17929
         width: 160
         height: 30
     - id: 18
@@ -4013,7 +4036,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["Shopkeeper_pushed"] == true and (Variable["Shopkeeper_talked_to_"]
-        == true)
+        == true) and (Variable["Chuck_Conversation"] == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -4665,13 +4688,13 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Account_for_Key_Gun_Info"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1029.4446
+        x: 1030.9371
         y: 389.5193
         width: 160
         height: 30
@@ -4942,15 +4965,15 @@ MonoBehaviour:
         destinationDialogueID: 40
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Murder_Solved"] == true
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1867.5029
-        y: 186.21333
+        x: 1889.8903
+        y: 194.20624
         width: 160
         height: 30
     - id: 36
@@ -5005,8 +5028,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1505.0345
-        y: 237.32901
+        x: 1702.0493
+        y: 244.79166
         width: 160
         height: 30
     - id: 37
@@ -5061,8 +5084,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1503.2164
-        y: 287.329
+        x: 1700.2312
+        y: 294.79166
         width: 160
         height: 30
     - id: 38
@@ -5119,8 +5142,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1505.0345
-        y: 340.96536
+        x: 1702.0493
+        y: 348.428
         width: 160
         height: 30
     - id: 39
@@ -5155,7 +5178,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: EventGuid
-        value: 267ebdb1-c1f0-47ca-acd5-16db3b6f6d83
+        value: e64afbdd-e372-480c-9f5a-216f7e14e74d
         type: 0
         typeString: 
       conversationID: 3
@@ -5173,8 +5196,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1505.0345
-        y: 390.96536
+        x: 1702.0493
+        y: 398.428
         width: 160
         height: 30
     - id: 40
@@ -5209,6 +5232,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
+      - title: EventGuid
+        value: e6058c00-c315-4f04-a5ee-0dea45a6b4d5
+        type: 0
+        typeString: 
       conversationID: 3
       isRoot: 0
       isGroup: 0
@@ -5224,13 +5251,69 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1867.5029
-        y: 236.21333
+        x: 1889.8903
+        y: 248.15363
+        width: 160
+        height: 30
+    - id: 41
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: '"Yes. You''re Aunt says she gave the gun back to the landlord."'
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 41
+        destinationConversationID: 3
+        destinationDialogueID: 28
+        isConnector: 0
+        priority: 2
+      conditionsString: Variable["Aunt_Gun_Info"] == true and (Variable["Aunt_Mad"]
+        == false) and (Variable["Chuck_Conversation"] == false)
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1452.7129
+        y: 189.59384
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 450.90875, y: 1.8181763}
-    canvasZoom: 0.5500004
+    canvasScrollPosition: {x: 1301.3157, y: 5.263153}
+    canvasZoom: 0.7600002
   - id: 4
     fields:
     - title: Title
@@ -6173,7 +6256,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Aunt_Talked_To"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8393,6 +8476,12 @@ MonoBehaviour:
         destinationDialogueID: 21
         isConnector: 0
         priority: 2
+      - originConversationID: 7
+        originDialogueID: 3
+        destinationConversationID: 7
+        destinationDialogueID: 30
+        isConnector: 0
+        priority: 2
       conditionsString: Variable["Aunt_Mad"] == false
       userScript: 
       onExecute:
@@ -9341,7 +9430,7 @@ MonoBehaviour:
         destinationDialogueID: 22
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Shopkeeper_pushed"] == true
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -9850,8 +9939,57 @@ MonoBehaviour:
         y: 282.57983
         width: 160
         height: 30
+    - id: 30
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Goodbye.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 7
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 640.52094
+        y: 73.84038
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 494.2855, y: 1.4285889}
+    canvasScrollPosition: {x: 57.14279, y: 0}
     canvasZoom: 0.7000003
   - id: 8
     fields:
@@ -10981,11 +11119,11 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 10
         type: 5
@@ -10997,19 +11135,19 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "\u201CIt has been my ghostly pleasure.\u201D"
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: EventGuid
-        value: 1c4ae392-ac64-49ad-8291-affb144301c4
+        value: 18cbd523-7be5-4bc6-bd89-b6994167fa2b
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       conversationID: 8
       isRoot: 0
       isGroup: 0
@@ -11022,16 +11160,28 @@ MonoBehaviour:
       userScript: Variable["Murder_Solved"] = true
       onExecute:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: 
+            m_MethodName: 
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       canvasRect:
         serializedVersion: 2
-        x: 27.901108
+        x: 24.95993
         y: 870
         width: 160
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.52000046
+    canvasZoom: 0.34000045
   syncInfo:
     syncActors: 0
     syncItems: 0
